@@ -2,11 +2,14 @@ function alphabeticShift(inputString) {
     //turn the string into an array
     const stringToArr = inputString.split('');
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
     //turn the alphabet string into an array
     const alphabetToArr = alphabet.split('');
+
     //iterate through the input string array
     let indexOfChar = [];
     for(let i = 0; i < stringToArr.length; i++) {
+
         //find the index in the alphabet array and add 1 to it
         if(stringToArr[i] !== 'z') {
             indexOfChar.push(alphabetToArr.indexOf(stringToArr[i]) + 1);
