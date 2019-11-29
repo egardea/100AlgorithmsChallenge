@@ -1,16 +1,14 @@
 function alphabeticShift(inputString) {
-    //turn the string into an array
+    //turn the input string into an array
     const stringToArr = inputString.split('');
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-
     //turn the alphabet string into an array
     const alphabetToArr = alphabet.split('');
 
-    //iterate through the input string array
+    //iterate through the input string
     let indexOfChar = [];
     for(let i = 0; i < stringToArr.length; i++) {
-
-        //find the index in the alphabet array and add 1 to it
+        //find the index of each letter
         if(stringToArr[i] !== 'z') {
             indexOfChar.push(alphabetToArr.indexOf(stringToArr[i]) + 1);
         } else if(stringToArr[i] === 'z') {
@@ -18,11 +16,11 @@ function alphabeticShift(inputString) {
         }
     };
     
-    //iterate through the indexofchar array to return the right letter
+    //iterate through index of characters
     let alphabeticShift = [];
     for(let i = 0; i < indexOfChar.length; i++) {
         alphabeticShift.push(alphabetToArr[indexOfChar[i]]);
-    };
+    }
     return alphabeticShift.join('');
 };
 
