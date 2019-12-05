@@ -1,18 +1,16 @@
 function alphabetSubsequence(s) {
-    //turn the string into an array
+    //turn the array into a string
     const stringToArr = s.split('');
-    //iterate through and find the char code
+
     let newArr = [];
-    for(let i = 0; i < stringToArr.length; i++){
-        newArr.push(stringToArr[i].charCodeAt())
+    for(let i = 0; i < stringToArr.length; i++) {
+        newArr.push(stringToArr[i].charCodeAt());
     }
-    //use new Set to remove duplicates and if there are, then return false
-    console.log(newArr);
-    if(new Set(newArr).size !== newArr.length){
+
+    if(new Set(newArr).size !== newArr.length) {
         return false;
     }
-    //compare the and return false if there is no sequence
-    console.log(new Set(newArr));
+    
     if(newArr[0] >= newArr[1]) {
         return false;
     }
