@@ -1,6 +1,6 @@
 function arrayMaximalAdjacentDifference(inputArray) {
     let difference = [];
-    
+
     //loop through and have nested function check for the difference of two nums
     for(let i = 0; i < inputArray.length - 1; i++) {
         function subtract(a, b) {
