@@ -12,7 +12,7 @@ function areSimilar(a, b) {
         }
     }
     console.log(errors);
-    return errors.toString() !== b.toString() ? false : true;
+    return errors.toString() === b.toString() ? true : false;
 };
 
 console.log(areSimilar([1, 2, 3], [1, 2, 3]));
