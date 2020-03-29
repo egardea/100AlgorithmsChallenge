@@ -1,16 +1,14 @@
 function arrayPreviousLess(items) {
-    let newItems = [...items];
+    const newItems = [];
+
     for(let i = 0; i < items.length; i++) {
-        if(items[i] <=  items[i - 1]){
-            newItems[i - 1] = -1;
+        if(items[i] >= items[i - 1]) {
+            newItems.push(items[i - 1]);
+        } else {
+            newItems.push(-1);
         }
-    };
+    }
 
-    newItems.unshift(-1);
-
-    if(items[items.length - 1] >= items[0]) {
-        newItems.pop();
-    };
     return newItems;
 };
 
